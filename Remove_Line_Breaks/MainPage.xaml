@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="Remove_Line_Breaks.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Remove_Line_Breaks"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBox x:Name="input_box" HorizontalAlignment="Left" Margin="90,0,0,0" TextWrapping="Wrap" Width="720" Height="900" VerticalAlignment="Center" TextChanged="Input_TextChanged" AcceptsReturn="True"/>
+        <TextBox x:Name="output_box" Margin="0,0,90,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="900" IsReadOnly="True" HorizontalAlignment="Right" Width="720"/>
+        <Button x:Name="main_button" Content="Remove line breaks" HorizontalAlignment="Center" Click="Button_Click"/>
+        <Button x:Name="clear_button" Content="Clear" Margin="0,640,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="139" Click="Clear_button_Click"/>
+    </Grid>
+</Page>
