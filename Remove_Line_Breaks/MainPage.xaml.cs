@@ -28,14 +28,14 @@ namespace Remove_Line_Breaks
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Remove_Button_Click(object sender, RoutedEventArgs e)
         {
             string str_input = input_box.Text;
             string str_output = Regex.Replace(str_input, "\n|\r\n|\r", "");
             output_box.Text = str_output;
         }
 
-        private void Clear_button_Click(object sender, RoutedEventArgs e)
+        private void Clear_Button_Click(object sender, RoutedEventArgs e)
         {
             string none = "";
             input_box.Text = none;

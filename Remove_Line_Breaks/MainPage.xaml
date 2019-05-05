@@ -9,9 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox x:Name="input_box" HorizontalAlignment="Left" Margin="90,0,0,0" TextWrapping="Wrap" Width="720" Height="900" VerticalAlignment="Center" TextChanged="Input_TextChanged" AcceptsReturn="True"/>
-        <TextBox x:Name="output_box" Margin="0,0,90,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="900" IsReadOnly="True" HorizontalAlignment="Right" Width="720"/>
-        <Button x:Name="main_button" Content="Remove line breaks" HorizontalAlignment="Center" Click="Button_Click"/>
-        <Button x:Name="clear_button" Content="Clear" Margin="0,640,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="139" Click="Clear_button_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="input_box" Grid.Row="0" Grid.Column="0" Margin="30" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <TextBox x:Name="output_box" Grid.Row="0" Grid.Column="2" Margin="30" IsReadOnly="True"/>
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,30,0,30">
+            <Button Margin="10" Content="Run" Click="Remove_Button_Click" HorizontalAlignment="Center"/>
+            <Button Margin="10" Content="Clear" Click="Clear_Button_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Page>
