@@ -18,7 +18,7 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <TextBox x:Name="input_box" Grid.Row="0" Grid.Column="0" Margin="30" TextWrapping="Wrap" AcceptsReturn="True"/>
-        <TextBox x:Name="output_box" Grid.Row="0" Grid.Column="2" Margin="30" IsReadOnly="True"/>
+        <TextBox x:Name="output_box" Grid.Row="0" Grid.Column="2" Margin="30" TextWrapping="Wrap" IsReadOnly="True"/>
         <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,30,0,30">
             <Button Margin="10" Content="Run" Click="Remove_Button_Click" HorizontalAlignment="Center"/>
             <Button Margin="10" Content="Clear" Click="Clear_Button_Click" HorizontalAlignment="Center"/>
