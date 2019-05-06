@@ -31,7 +31,7 @@ namespace Remove_Line_Breaks
         private void Remove_Button_Click(object sender, RoutedEventArgs e)
         {
             string str_input = input_box.Text;
-            string str_output = Regex.Replace(str_input, "\n|\r\n|\r", "");
+            string str_output = Regex.Replace(str_input, "\n|\r\n|\r", " ");
             output_box.Text = str_output;
         }
 
