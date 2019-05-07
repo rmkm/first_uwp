@@ -17,11 +17,18 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="input_box" Grid.Row="0" Grid.Column="0" Margin="30" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <TextBox x:Name="input_box" Grid.Row="0" Grid.Column="0" Margin="30" TextWrapping="Wrap" AcceptsReturn="True" TextChanged="Input_box_TextChanged"/>
         <TextBox x:Name="output_box" Grid.Row="0" Grid.Column="2" Margin="30" TextWrapping="Wrap" IsReadOnly="True"/>
         <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,30,0,30">
-            <Button Margin="10" Content="Run" Click="Remove_Button_Click" HorizontalAlignment="Center"/>
-            <Button Margin="10" Content="Clear" Click="Clear_Button_Click" HorizontalAlignment="Center"/>
+            <Button Margin="10" Click="Remove_Button_Click" HorizontalAlignment="Center">
+                <Image Source="data\run.png"/>
+            </Button>
+            <Button Margin="10" Click="Clear_Button_Click" HorizontalAlignment="Center">
+                <Image Source="data\clear.png"/>
+            </Button>
+            <Button Margin="10" Click="Clip_Button_Click" HorizontalAlignment="Center">
+                <Image Source="data\clip.png"/>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

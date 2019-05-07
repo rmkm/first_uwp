@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Text.RegularExpressions;
+using Windows.ApplicationModel.DataTransfer;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -41,8 +42,19 @@ namespace Remove_Line_Breaks
             input_box.Text = none;
             output_box.Text = none;
         }
+        private void Clip_Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataPackage dataPackage = new DataPackage();
+            dataPackage.SetText(output_box.Text);
+            Clipboard.SetContent(dataPackage);
+        }
 
         private void Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Input_box_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
